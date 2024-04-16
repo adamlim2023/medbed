@@ -1,9 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
 import ContactImage from "assets/images/contact.png";
 
 const ContactForm = () => {
   return (
-    <div className="rounded-[27px] overflow-hidden relative">
+    <motion.div
+      initial={{ x: -350, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1, ease: "backOut" }}
+      className="rounded-[27px] overflow-hidden relative"
+    >
       <img
         src={ContactImage}
         className="absolute top-0 left-0 w-full h-full object-cover"
@@ -35,7 +41,7 @@ const ContactForm = () => {
           Send Message
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

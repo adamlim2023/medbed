@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import QuestionIcon from "assets/images/icons/question.svg";
 import DoseIcon from "assets/images/icons/dose.svg";
 import CardIcon from "assets/images/icons/card.svg";
@@ -37,10 +38,20 @@ const HowItWorks = () => {
   ];
   return (
     <div className="grid gap-6">
-      <p className="font-bold text-[25px] lg:text-4xl">How it Works</p>
+      <motion.p
+        initial={{ x: -350, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "backOut" }}
+        className="font-bold text-[25px] lg:text-4xl"
+      >
+        How it Works
+      </motion.p>
       <div className="grid lg:grid-cols-2 gap-5 lg:gap-6">
         {items.map((item) => (
-          <div
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{ duration: 0.8, ease: "backOut" }}
             className="flex p-5 border border-[#E5E5E5] rounded-[19px] gap-5 lg:gap-7"
             key={item.id}
           >
@@ -55,7 +66,7 @@ const HowItWorks = () => {
                 {item.description}
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
