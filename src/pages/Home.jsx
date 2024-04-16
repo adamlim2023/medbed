@@ -41,7 +41,7 @@ const Home = () => {
   return (
     <div className="grid gap-16">
       <Hero />
-      <div className="w-full max-w-5xl grid gap-[60px] mx-auto">
+      <div className="w-full max-w-5xl grid gap-12 lg:gap-[60px] mx-auto px-5">
         <About />
         <HowItWorks />
         <WhyChoosing />

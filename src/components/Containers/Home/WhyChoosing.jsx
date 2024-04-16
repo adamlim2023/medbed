@@ -28,15 +28,15 @@ const WhyChoosing = () => {
   ];
   return (
     <div>
-      <div className="w-full max-w-5xl mx-auto flex items-center gap-[122px]">
-        <p className="w-full max-w-[177px] font-bold text-4xl">
+      <div className="w-full max-w-5xl mx-auto flex flex-col lg:flex-row lg:items-center gap-[30px] lg:gap-[122px]">
+        <p className="w-full lg:max-w-[177px] font-bold text-[25px] lg:text-4xl">
           Why Choosing Medbed
         </p>
-        <div className="grid grid-cols-3 gap-14">
+        <div className="grid lg:grid-cols-3 gap-7 lg:gap-14">
           {items.map((item) => (
-            <div key={item.id} className="grid gap-[18px]">
-              <p className="font-semibold text-xl">{item.title}</p>
-              <p className="font-light text-[15px]">{item.description}</p>
+            <div key={item.id} className="grid gap-2.5 lg:gap-[18px]">
+              <p className="font-semibold text-[17px] lg:text-xl">{item.title}</p>
+              <p className="font-light text-[13px] lg:text-[15px]">{item.description}</p>
               <Link className="flex gap-2" to={item.path}>
                 <span className="font-medium text-[13px]">More Info</span>
                 <img src={ArrowRightIcon} />
