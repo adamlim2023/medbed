@@ -8,7 +8,7 @@ import ContactForm from "components/ContactForm";
 
 const Product = () => {
   return (
-    <div className="w-full max-w-5xl grid gap-[60px] mx-auto grid gap-16">
+    <div className="w-full max-w-5xl grid gap-[60px] mx-auto grid gap-12 lg:gap-16 px-6">
       <Hero />
       <FreeListing />
       <HowItWorks />

@@ -26,17 +26,21 @@ const FreeListing = () => {
     },
   ];
   return (
-    <div className="p-16 pt-11 rounded-[27px] relative overflow-hidden text-white">
-      <span className="font-title font-bold text-[133px] opacity-70 absolute top-8 right-10">
+    <div className="p-8 pb-9 lg:p-16 lg:pt-11 rounded-[27px] relative overflow-hidden text-white">
+      <span className="font-title font-bold text-[133px] opacity-70 absolute top-20 lg:top-8 -right-4 lg:right-10">
         *
       </span>
-      <span className="font-title font-bold text-[464px] leading-none absolute -bottom-[370px] -right-6">*</span>
+      <span className="font-title font-bold text-[273px] lg:text-[464px] leading-none absolute -bottom-56 lg:-bottom-[370px] -right-6">
+        *
+      </span>
       <img
         src={BgImage}
         className="absolute top-0 left-0 w-full h-full object-cover -z-10"
       />
-      <p className="w-full max-w-[414px] font-bold text-[39px] mb-8">Why Are Our Listings Free?</p>
-      <div className="grid grid-cols-3 gap-[60px] mb-16">
+      <p className="w-full max-w-[194px] lg:max-w-[414px] font-bold text-[30px] lg:text-[39px] mb-8">
+        Why Are Our Listings Free?
+      </p>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[30px] lg:gap-[60px] mb-11 lg:mb-16">
         {data.map((item, i) => (
           <div key={i}>
             <img src={item.icon} className="mb-5" />
@@ -47,7 +51,7 @@ const FreeListing = () => {
           </div>
         ))}
       </div>
-      <button className="h-11 px-6 font-medium text-sm text-white rounded-[11px] bg-[#FDD61A]">
+      <button className="w-full lg:w-auto h-11 px-6 font-medium text-sm text-white rounded-[11px] bg-[#FDD61A]">
         Request a Quotation
       </button>
     </div>
