@@ -6,11 +6,13 @@ import Features from "components/Containers/Disease/Features";
 
 const Disease = () => {
   return (
-    <div className="w-full max-w-5xl grid gap-[60px] mx-auto grid gap-16">
-      <Hero />
-      <Features />
-      <HowItWorks />
-      <ContactForm />
+    <div className="px-6">
+      <div className="w-full max-w-5xl mx-auto grid gap-12 lg:gap-16">
+        <Hero />
+        <Features /> 
+        <HowItWorks />
+        <ContactForm />
+      </div>
     </div>
   );
 };

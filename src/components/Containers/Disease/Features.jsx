@@ -34,14 +34,18 @@ const Features = () => {
 
   return (
     <div className="grid gap-8">
-      <p className="font-bold text-4xl">Features Overview</p>
-      <div className="grid grid-cols-2 gap-7">
+      <p className="font-bold text-[25px] lg:text-4xl">Features Overview</p>
+      <div className="grid lg:grid-cols-2 gap-[30px] lg:gap-7">
         {data.map((feature, i) => (
           <div key={i} className="grid gap-5 rounded-[19px]">
             <img src={feature.image} className="rounded-[19px]" />
-            <div className="grid gap-3">
-              <p className="font-semibold text-2xl">{feature.title}</p>
-              <p className="font-light text-base">{feature.description}</p>
+            <div className="grid gap-2 lg:gap-3">
+              <p className="font-semibold text-xl lg:text-2xl">
+                {feature.title}
+              </p>
+              <p className="font-light text-[15px] lg:text-base">
+                {feature.description}
+              </p>
             </div>
           </div>
         ))}
