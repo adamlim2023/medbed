@@ -75,7 +75,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="w-full max-w-[494px] flex flex-col-reverse lg:flex-row flex-shrink-0 gap-5">
-        <div className="w-full lg:w-[88px] flex-shrink-0 grid grid-cols-4 lg:grid-cols-1 gap-3.5">
+        <div className="w-full lg:w-[88px] flex-shrink-0 grid lg:flex lg:flex-col grid-cols-4 lg:grid-cols-1 gap-3.5">
           <img
             src={VideoImage}
             className="h-[87px] lg:h-[108px] rounded-[14px] opacity-20 hover:opacity-100 transition object-cover cursor-pointer"
