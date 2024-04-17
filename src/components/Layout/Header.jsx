@@ -10,6 +10,7 @@ const Header = () => {
   const items = [
     { id: 1, label: "Our Product", path: "/product" },
     { id: 2, label: "Get In Touch", path: "/contact" },
+    { id: 3, label: "Disease", path: "/disease" },
   ];
 
   return (

@@ -3,7 +3,7 @@ import BgImage from "assets/images/disease.png";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col-reverse lg:flew-row gap-5 lg:gap-[60px]">
+    <div className="flex flex-col-reverse lg:flex-row gap-5 lg:gap-[60px]">
       <div>
         <p className="w-full max-w-[333px] font-bold text-[35px] lg:text-[45px] leading-[45px] lg:leading-[50px] mb-5 lg:mb-6">
           Here Goes a Big Title About Our Medbed
