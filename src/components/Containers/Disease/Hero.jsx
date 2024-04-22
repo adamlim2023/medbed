@@ -95,6 +95,7 @@ const Hero = () => {
             className="w-full max-w-5xl object-cover relative z-10"
             play={true}
             ref={videoRef}
+            controls
           >
             <source src={Video} type="video/mp4" />
           </video>
