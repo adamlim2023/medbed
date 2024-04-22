@@ -37,7 +37,7 @@ const ContactForm = () => {
             className="w-full lg:col-span-2 h-40 bg-white outline-none px-6 py-3 rounded-xl text-sm resize-none"
           />
         </div>
-        <button className="w-full lg:w-auto h-11 rounded-[11px] bg-[#FDD61A] px-9 font-medium text-sm text-white">
+        <button className="w-full lg:w-auto h-11 rounded-[11px] bg-[#FDD61A] px-9 font-medium text-sm text-white hover:opacity-50 transition">
           Send Message
         </button>
       </div>

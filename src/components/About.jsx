@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import VideoImage from "assets/images/video.png";
-import PlayIcon from "assets/images/play.svg";
+import Video from "assets/videos/index.mp4";
+import PlayIcon from "assets/images/icons/play.svg";
 
 const About = () => {
+  const videoRef = useRef();
+  const [playing, setPlaying] = useState(false);
+
+  const handlePlay = () => {
+    videoRef.current.play();
+    setPlaying(true);
+  };
+
   return (
     <div className="flex flex-col lg:flex-row items-center gap-7 lg:gap-14">
       <motion.div
@@ -12,11 +20,24 @@ const About = () => {
         transition={{ duration: 1, ease: "backOut" }}
         className="w-full max-w-[407px] h-[380px] flex-shrink-0 relative rounded-[29px] lg:rounded-[40px] overflow-hidden"
       >
-        <img src={VideoImage} className="w-full h-full object-cover" />
-        <img
-          src={PlayIcon}
-          className="absolute top-0 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 cursor-pointer"
-        />
+        <video
+          className="w-full h-full object-cover"
+          play={true}
+          ref={videoRef}
+          onEnded={() => setPlaying(false)}
+        >
+          <source src={Video} type="video/mp4" />
+        </video>
+        {!playing && (
+          <button
+            className="w-[86px] h-[86px] flex items-center justify-center rounded-full border border-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-[5px] backdrop-brightness-[1.15] transition hover:opacity-80"
+            onClick={handlePlay}
+          >
+            <div className="w-14 h-14 rounded-full bg-white bg-white/45 flex items-center justify-center">
+              <img src={PlayIcon} />
+            </div>
+          </button>
+        )}
       </motion.div>
       <motion.div
         initial={{ x: 200, opacity: 0 }}
@@ -39,7 +60,7 @@ const About = () => {
           quis nostruex ercitation ullamco laboris nisi ut aliquip ex ea como do
           consequat loremono ita lianost dolore magna aliqu oris nisi ut aliq
         </p>
-        <button className="w-full lg:w-auto h-11 px-11 rounded-[11px] font-medium text-sm bg-gradient-to-br from-[#F7DEE8] via-[#E7E6FC] via-30% via-[#E4F1FE] via-70% to-[#E8EEF3]">
+        <button className="w-full lg:w-auto h-11 px-11 rounded-[11px] font-medium text-sm bg-gradient-to-br from-[#F7DEE8] via-[#E7E6FC] via-30% via-[#E4F1FE] via-70% to-[#E8EEF3] hover:opacity-50 transition">
           View Details
         </button>
       </motion.div>

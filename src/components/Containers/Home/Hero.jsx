@@ -5,6 +5,7 @@ import UserImage2 from "assets/images/users/2.png";
 import UserImage3 from "assets/images/users/3.png";
 import StarIcon from "assets/images/icons/star.svg";
 import BedImage from "assets/images/bed.png";
+import EyeIcon from "assets/images/icons/eye.svg";
 
 const Hero = () => {
   return (
@@ -60,9 +61,11 @@ const Hero = () => {
           transition={{ duration: 1, ease: "backOut", delay: 0.5 }}
           className="absolute hidden lg:inline -right-24 top-28"
         >
-          <img
-            src={BedImage}
-          />
+          <img src={BedImage} />
+          <a href="https://google.com" className="w-32 h-32 flex flex-col items-center justify-center gap-2.5 rounded-full absolute bottom-32 left-1/2 bg-white/30 backdrop-blur-[11px] backdrop-brightness-[1.05] hover:opacity-50 transition">
+            <img src={EyeIcon} />
+            <span className="font-medium text-white text-[15px]">EXPLORE</span>
+          </a>
         </motion.div>
       </div>
     </div>

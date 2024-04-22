@@ -51,7 +51,7 @@ const FreeListing = () => {
           </div>
         ))}
       </div>
-      <button className="w-full lg:w-auto h-11 px-6 font-medium text-sm text-white rounded-[11px] bg-[#FDD61A]">
+      <button className="w-full lg:w-auto h-11 px-6 font-medium text-sm text-white rounded-[11px] bg-[#FDD61A] hover:opacity-50 transition">
         Request a Quotation
       </button>
     </div>

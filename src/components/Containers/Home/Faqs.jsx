@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const Collapse = ({ question, answer }) => {
-  const [opened, setOpened] = useState(true);
+  const [opened, setOpened] = useState(false);
 
   return (
     <motion.div

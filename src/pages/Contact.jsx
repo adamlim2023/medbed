@@ -28,7 +28,7 @@ const Contact = () => {
               className="w-full lg:col-span-2 h-[260px] bg-[#F8F7F6] outline-none px-6 py-3 rounded-xl text-[15px] leading-[25px] resize-none"
             />
           </div>
-          <button className="w-full h-11 rounded-[11px] bg-gradient-to-br from-[#F7DEE8] via-[#E7E6FC] via-30% via-[#E4F1FE] via-70% to-[#E8EEF3] font-medium text-sm">
+          <button className="w-full h-11 rounded-[11px] bg-gradient-to-br from-[#F7DEE8] via-[#E7E6FC] via-30% via-[#E4F1FE] via-70% to-[#E8EEF3] font-medium text-sm hover:opacity-50 transition">
             Send Request
           </button>
         </div>

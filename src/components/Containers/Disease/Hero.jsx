@@ -1,10 +1,19 @@
-import React from "react";
-import BgImage from "assets/images/disease.png";
+import React, { useRef, useState } from "react";
+import Video from "assets/videos/index.mp4";
+import PlayIcon from "assets/images/icons/play.svg";
 
 const Hero = () => {
+  const videoRef = useRef();
+  const [playing, setPlaying] = useState(false);
+
+  const handlePlay = () => {
+    videoRef.current.play();
+    setPlaying(true);
+  };
+
   return (
     <div className="flex flex-col-reverse lg:flex-row gap-5 lg:gap-[60px]">
-      <div>
+      <div className="w-full max-w-full md:max-w-[470px]">
         <p className="w-full max-w-[333px] font-bold text-[35px] lg:text-[45px] leading-[45px] lg:leading-[50px] mb-5 lg:mb-6">
           Here Goes a Big Title About Our Medbed
         </p>
@@ -41,11 +50,30 @@ const Hero = () => {
             <span className="font-light text-base">Disease Type and Name</span>
           </div>
         </div>
-        <button className="w-full lg:w-auto h-11 px-11 rounded-[11px] font-medium text-sm bg-gradient-to-br from-[#F7DEE8] via-[#E7E6FC] via-30% via-[#E4F1FE] via-70% to-[#E8EEF3]">
+        <button className="w-full lg:w-auto h-11 px-11 rounded-[11px] font-medium text-sm bg-gradient-to-br from-[#F7DEE8] via-[#E7E6FC] via-30% via-[#E4F1FE] via-70% to-[#E8EEF3] hover:opacity-50 transition">
           Request a Quotation
         </button>
       </div>
-      <img src={BgImage} className="w-full max-w-[494pxs]" />
+      <div className="w-full md:max-w-[494px] max-w-full h-full object-cover rounded-[27px] overflow-hidden relative">
+        <video
+          className="w-full h-full object-cover"
+          play={true}
+          ref={videoRef}
+          onEnded={() => setPlaying(false)}
+        >
+          <source src={Video} type="video/mp4" />
+        </video>
+        {!playing && (
+          <button
+            className="w-[86px] h-[86px] flex items-center justify-center rounded-full border border-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-[5px] backdrop-brightness-[1.15] transition hover:opacity-80"
+            onClick={handlePlay}
+          >
+            <div className="w-14 h-14 rounded-full bg-white bg-white/45 flex items-center justify-center">
+              <img src={PlayIcon} />
+            </div>
+          </button>
+        )}
+      </div>
     </div>
   );
 };
